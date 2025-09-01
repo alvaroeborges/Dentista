@@ -10,25 +10,44 @@
 
 <body class="bg-gray-100 font-sans italic">
     <!-- Navbar -->
-    <nav class="bg-white ml-50 items-center">
-        <div class=" flex justify-between items-center italic">
-            <img src="./img/01a12974-e670-4c4c-8464-5825cde412b1.jfif" class="w-full max-w-sm rounded-lg ml-10">
-            <div class="space-x-10 hidden sm:flex mr-5">
-                <a href="#servicos" class="hover:underline text-1xl">Serviços</a>
-                <a href="#equipe" class="hover:underline text-1xl">Equipe</a>
-                <a href="https://maps.app.goo.gl/7X8mq6arjcaqTzqA6" class="hover:underline">Endereço</a>
-                <a href="https://wa.me/+5535997613845?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta"
-                    class="hover:underline text-1xl ">Whatsapp</a>
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <!-- Logo -->
+            <a href="#">
+                <img src="./img/01a12974-e670-4c4c-8464-5825cde412b1.jfif" class="max-w-[15rem] sm:max-w-[20rem] rounded-lg">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden sm:flex space-x-6 items-center">
+                <a href="#servicos" class="hover:underline text-lg">Serviços</a>
+                <a href="#equipe" class="hover:underline text-lg">Equipe</a>
+                <a href="https://maps.app.goo.gl/7X8mq6arjcaqTzqA6" class="hover:underline text-lg">Endereço</a>
+                <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta"
+                    class="hover:underline text-lg ">Whatsapp</a>
                 <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw=="
-                    class="hover:underline text-1xl">Instagram</a>
+                    class="hover:underline text-lg">Instagram</a>
             </div>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="sm:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white">
+            <a href="#servicos" class="block py-3 px-4 text-lg hover:bg-gray-100">Serviços</a>
+            <a href="#equipe" class="block py-3 px-4 text-lg hover:bg-gray-100">Equipe</a>
+            <a href="https://maps.app.goo.gl/7X8mq6arjcaqTzqA6" class="block py-3 px-4 text-lg hover:bg-gray-100">Endereço</a>
+            <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" class="block py-3 px-4 text-lg hover:bg-gray-100">Whatsapp</a>
+            <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw==" class="block py-3 px-4 text-lg hover:bg-gray-100">Instagram</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="bg-blue-100 py-20 text-center">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-4">Bem-vindo à Essential Odontologia</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Bem-vindo à Essential Odontologia</h2>
             <p class="text-lg mb-3">Cuidamos do seu sorriso com profissionalismo e carinho! </p>
         </div>
     </section>
@@ -61,13 +80,14 @@
             <h2 class="text-3xl font-bold mb-8">Nossa Equipe</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <div class="bg-white p-6 rounded shadow ">
-                    <img src="./img/b265a1b4-e506-4be0-be00-8d6cf8404693.jpeg"
-                        class="w-25 h-25 rounded-full mx-auto mb-4">
+                    <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49.jpeg"
+                        class="w-13 h-13 object-cover rounded-full mx-auto mb-4">
                     <h3 class="text-xl font-semibold mb-2 ">Dra. Myllena Esteves</h3>
                     <p>Especialista em Endodontia</p>
                 </div>
                 <div class="bg-white p-6 rounded shadow">
-                    <img src="./img/Screenshot_2.png" class="w-25 h-25 rounded-full mx-auto mb-4">
+                    <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49 (1).jpeg"
+                     class="w-13 h-13 object-cover rounded-full mx-auto mb-4">
                     <h3 class="text-xl font-semibold mb-2">Dr. Michel Frenhan</h3>
                     <p>Ortodontista</p>
                 </div>
@@ -106,6 +126,11 @@
                     equipe
                     qualificada, sempre mantendo o compromisso com a qualidade e o bem-estar de cada paciente.
                 </p>
+                  <div class="bg-white p-6 rounded shadow mt-8">
+                    <img src="./img/juntos.jpeg"
+                     class="w-13 h-13 object-cover rounded-full mx-auto mb-4">
+                    <p>Equipe unida e comprometida com a saúde bucal.</p>
+                </div>
             </div>
     </section>
 
@@ -113,6 +138,15 @@
     <footer class="bg-blue-600 text-white p-4 text-center">
         <p>&copy; 2025 Essential Odontologia. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 
