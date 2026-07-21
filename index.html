@@ -2,186 +2,272 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essential Odontologia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essential Odontologia</title>
+  <meta name="description" content="Essential Odontologia — atendimento odontológico humanizado, moderno e acessível. Clareamento, endodontia, facetas, prótese e mais.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-100 font-sans italic">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-10">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#">
-                <img src="./img/01a12974-e670-4c4c-8464-5825cde412b1.jfif"
-                    class="max-w-[15rem] sm:max-w-[20rem] rounded-lg">
-            </a>
+<body>
 
-            <!-- Desktop Menu -->
-            <div class="hidden sm:flex space-x-6 items-center ">
-                <a href="#servicos" class="hover:underline text-lg">Serviços</a>
-                <a href="#equipe" class="hover:underline text-lg">Equipe</a>
-                <a href="https://maps.app.goo.gl/NNWmJzbNREraG9cNA" target="_blank" rel="noopener noreferrer"
-                    class="hover:underline text-lg">Endereço</a>
-                <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta"
-                    target="_blank" rel="noopener noreferrer" class="hover:underline text-lg ">Whatsapp</a>
-                <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw=="
-                    target="_blank" rel="noopener noreferrer" class="hover:underline text-lg">Instagram</a>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo-link">
+        <img src="./img/01a12974-e670-4c4c-8464-5825cde412b1.jfif" alt="Essential Odontologia">
+      </a>
 
-            <!-- Hamburger Button -->
-            <button id="menu-btn" class="sm:hidden focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg>
-            </button>
+      <div class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Sobre</a>
+        <a href="https://maps.app.goo.gl/NNWmJzbNREraG9cNA" target="_blank" rel="noopener noreferrer">Endereço</a>
+        <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+        
+      </div>
+
+      <button id="menu-btn" class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#contato">Sobre</a>
+      <a href="https://maps.app.goo.gl/7X8mq6arjcaqTzqA6" target="_blank" rel="noopener noreferrer">Endereço</a>
+      <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">Atendimento humanizado</span>
+        <h1>Bem-vindo à Essential Odontologia</h1>
+        <p class="lead">Cuidamos do seu sorriso com profissionalismo e carinho!</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Agendar no WhatsApp</a>
+          <a href="#servicos" class="btn btn-outline">Ver serviços</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="heroVisual" data-reveal style="--reveal-delay:.15s">
+        <div class="orbit-ring" aria-hidden="true"></div>
+        <span class="bubble b1" aria-hidden="true"></span>
+        <span class="bubble b2" aria-hidden="true"></span>
+        <span class="bubble b3" aria-hidden="true"></span>
+        <span class="bubble b4" aria-hidden="true"></span>
+        <span class="bubble b5" aria-hidden="true"></span>
+
+        <div class="pearl-scene" aria-hidden="true">
+          <div class="pearl" id="pearl">
+            <span class="facet f1"></span>
+            <span class="facet f2"></span>
+            <span class="facet f3"></span>
+            <span class="facet f4"></span>
+            <span class="facet f5"></span>
+            <span class="facet f6"></span>
+            <span class="facet f7"></span>
+            <span class="facet f8"></span>
+            <span class="pearl-cap"></span>
+            <span class="pearl-root"></span>
+            <span class="pearl-shine"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="bg-cream">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">O que fazemos</span>
+        <h2>Nossos Serviços</h2>
+        <p>Tratamentos completos para cuidar da saúde e da estética do seu sorriso.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"></path>
+            </svg>
+          </div>
+          <h3>Clareamento Dental</h3>
+          <p>Deixe seu sorriso mais brilhante com nossos tratamentos de clareamento de última geração.</p>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden sm:hidden bg-white">
-            <a href="#servicos" class="block py-3 px-4 text-lg hover:bg-gray-100">Serviços</a>
-            <a href="#equipe" class="block py-3 px-4 text-lg hover:bg-gray-100">Equipe</a>
-            <a href="https://maps.app.goo.gl/7X8mq6arjcaqTzqA6" target="_blank" rel="noopener noreferrer"
-                class="block py-3 px-4 text-lg hover:bg-gray-100">Endereço</a>
-            <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
-                rel="noopener noreferrer" class="block py-3 px-4 text-lg hover:bg-gray-100">Whatsapp</a>
-            <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw==" target="_blank"
-                rel="noopener noreferrer" class="block py-3 px-4 text-lg hover:bg-gray-100">Instagram</a>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="7" r="4"></circle>
+              <line x1="12" y1="11" x2="12" y2="19"></line>
+              <circle cx="12" cy="20.5" r="1" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </div>
+          <h3>Endodontia</h3>
+          <p>Especialidade odontológica responsável pelo tratamento do canal, preservando dentes comprometidos por cáries ou traumas.</p>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="bg-[#dec0a9] py-20 text-center">
-        <div class="container mx-auto ">
-            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Bem-vindo à Essential Odontologia</h2>
-            <p class="text-lg mb-3">Cuidamos do seu sorriso com profissionalismo e carinho! </p>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="5" width="12" height="14" rx="3"></rect>
+              <rect x="9" y="9" width="12" height="14" rx="3"></rect>
+            </svg>
+          </div>
+          <h3>Facetas em Resina</h3>
+          <p>São finas camadas de um material plástico moldado sobre a parte frontal dos dentes para melhorar a aparência do sorriso. Corrigindo imperfeições, como manchas, lascas e desalinhamentos.</p>
         </div>
-    </section>
 
-    <!-- Serviços -->
-    <section id="servicos" class="py-20">
-        <div class=" container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Nossos Serviços</h2>
-            <div class="flex flex-wrap justify-center gap-8">
-                <div class="bg-white p-6 rounded shadow grow basis-[350px]">
-                    <h3 class="text-xl font-semibold mb-4">Clareamento Dental</h3>
-                    <p>Deixe seu sorriso mais brilhante com nossos tratamentos de clareamento de última geração.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow grow basis-[350px]">
-                    <h3 class="text-xl font-semibold mb-4">Endodontia</h3>
-                    <p>Especialidade odontológica responsável pelo tratamento do canal, preservando dentes comprometidos
-                        por cáries ou traumas.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow grow basis-[350px]">
-                    <h3 class="text-xl font-semibold mb-4">Facetas em Resina</h3>
-                    <p>São finas camadas de um material plástico moldado sobre a parte frontal dos dentes para melhorar
-                        a aparência do sorriso. Corrigindo imperfeições, como manchas, lascas e desalinhamentos.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow grow basis-[350px]">
-                    <h3 class="text-xl font-semibold mb-4">Prótese</h3>
-                    <p>Restauramos sorrisos com próteses dentárias de alta qualidade, garantindo conforto e estética.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded shadow grow basis-[350px]">
-                    <h3 class="text-xl font-semibold mb-4">Restauração</h3>
-                    <p>Correção de dentes danificados com materiais de alta qualidade, devolvendo a função e estética.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded shadow grow basis-[350px]">
-                    <h3 class="text-xl font-semibold mb-4">Profilaxia Dental</h3>
-                    <p>Limpeza profissional e profunda dos dentes, que remove placa bacteriana, tártaro, biofilme e
-                        manchas superficiais
-                        para prevenir doenças bucais como cáries e gengivite, além de contribuir para a saúde geral.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow grow basis-[350px]">
-                    <h3 class="text-xl font-semibold mb-4">Exodontia</h3>
-                    <p>Extração de dentes comprometidos ou que não podem ser recuperados, realizada com segurança e conforto.</p>
-                </div>
-            </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 18V11a8 8 0 0 1 16 0v7"></path>
+              <line x1="4" y1="18" x2="4" y2="21"></line>
+              <line x1="20" y1="18" x2="20" y2="21"></line>
+              <line x1="12" y1="11" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>Prótese</h3>
+          <p>Restauramos sorrisos com próteses dentárias de alta qualidade, garantindo conforto e estética.</p>
         </div>
-    </section>
 
-    <!-- Equipe -->
-    <section id="equipe" class="bg-[#dec0a9] py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Nossa Equipe</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <div class="bg-white p-6 rounded shadow bg-[#c0a38c] ">
-                    <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49.jpeg"
-                        class="w-13 h-13 object-cover rounded-full mx-auto mb-4 ">
-                    <h3 class="text-xl font-semibold mb-2 ">Dra. Myllena Esteves</h3>
-                    <p>Cirurgiã Dentista</p>
-                    <p>Especialista em Endodontia</p>
-
-                </div>
-                <div class="bg-white p-6 rounded shadow">
-                    <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49 (1).jpeg"
-                        class="w-13 h-13 object-cover rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Dr. Michel Frenhan</h3>
-                    <p>Cirurgião Dentista</p>
-                    <p>Pós graduando em Implantodontia</p>
-
-                </div>
-
-            </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3>Restauração</h3>
+          <p>Correção de dentes danificados com materiais de alta qualidade, devolvendo a função e estética.</p>
         </div>
-    </section>
 
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">O Que Nossos Pacientes Dizem</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded shadow">
-                    <p class="italic">"Fiz Limpeza hoje, e gente, nunca vi uma mãozinha tão levinha assim, não senti dor nenhuma, não sangrou a gengiva... Saí de boca limpinha e sem nenhum machucadinho."</p>
-                    <p class="mt-4 font-semibold">Gabi Mansur</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow">
-                    <p class="italic">"Profissionais muito qualificados e atenciosos. Recomendo!"</p>
-                    <p class="mt-4 font-semibold">Carlos Mendes</p>
-                </div>
-            </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"></path>
+            </svg>
+          </div>
+          <h3>Profilaxia Dental</h3>
+          <p>Limpeza profissional e profunda dos dentes, que remove placa bacteriana, tártaro, biofilme e manchas superficiais para prevenir doenças bucais como cáries e gengivite, além de contribuir para a saúde geral.</p>
         </div>
-    </section>
 
-    <!-- Contato -->
-    <section id="contato" class="bg-[#dec0a9] py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Sobre Nós</h2>
-            <div class="max-w-lg mx-auto">
-                <p>A Essential Odontologia nasceu do sonho de oferecer um atendimento odontológico humanizado, moderno e
-                    acessível. A clínica começou com um grande propósito: cuidar
-                    do sorriso das pessoas com dedicação e excelência.
-                    <br>
-                    Com o passar do tempo, estamos investimos em tecnologia, ampliamos nossa estrutura e formamos uma
-                    equipe
-                    qualificada, sempre mantendo o compromisso com a qualidade e o bem-estar de cada paciente.
-                </p>
-                <div class="bg-white p-6 rounded shadow mt-8">
-                    <img src="./img/juntos.jpeg" class="w-13 h-13 object-cover rounded-full mx-auto mb-4">
-                    <p>Equipe unida e comprometida com a saúde bucal.</p>
-                </div>
-            </div>
-    </section>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="4" x2="18" y2="20"></line>
+              <line x1="18" y1="4" x2="6" y2="20"></line>
+              <circle cx="6" cy="4" r="1.6" fill="currentColor" stroke="none"></circle>
+              <circle cx="18" cy="4" r="1.6" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </div>
+          <h3>Exodontia</h3>
+          <p>Extração de dentes comprometidos ou que não podem ser recuperados, realizada com segurança e conforto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#C0A38C] text-white p-4 text-center">
-        <p>&copy; 2025 Essential Odontologia. Todos os direitos reservados.</p>
-        <p class="text-1xl">Site desenvolvido por Álvaro Esteves (34) 9 9227-6929.</p>
-    </footer>
+  <!-- Equipe -->
+  <section id="equipe" class="bg-sand">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Quem cuida de você</span>
+        <h2>Nossa Equipe</h2>
+        <p>Profissionais dedicados à excelência no seu atendimento.</p>
+      </div>
 
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+      <div class="team-grid">
+        <div class="team-card" data-reveal>
+          <div class="team-photo-ring">
+            <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49.jpeg" alt="Dra. Myllena Esteves, Cirurgiã Dentista">
+          </div>
+          <h3>Dra. Myllena Esteves</h3>
+          <p class="role">Cirurgiã Dentista</p>
+          <p class="spec">Especialista em Endodontia</p>
+        </div>
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+        <div class="team-card" data-reveal>
+          <div class="team-photo-ring">
+            <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49 (1).jpeg" alt="Dr. Michel Frenhan, Cirurgião Dentista">
+          </div>
+          <h3>Dr. Michel Frenhan</h3>
+          <p class="role">Cirurgião Dentista</p>
+          <p class="spec">Pós graduando em Implantodontia</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="bg-cream">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Confiança</span>
+        <h2>O Que Nossos Pacientes Dizem</h2>
+      </div>
+
+      <div class="testi-grid">
+        <div class="testi-card" data-reveal>
+          <span class="quote-mark">&ldquo;</span>
+          <p class="quote">Fiz Limpeza hoje, e gente, nunca vi uma mãozinha tão levinha assim, não senti dor nenhuma, não sangrou a gengiva... Saí de boca limpinha e sem nenhum machucadinho.</p>
+          <p class="author">Gabi Mansur</p>
+        </div>
+        <div class="testi-card" data-reveal>
+          <span class="quote-mark">&ldquo;</span>
+          <p class="quote">Profissionais muito qualificados e atenciosos. Recomendo!</p>
+          <p class="author">Carlos Mendes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre / Contato -->
+  <section id="contato" class="bg-sand">
+    <div class="about-blob" aria-hidden="true"></div>
+    <div class="container about-grid">
+      <div class="about-copy" data-reveal>
+        <span class="eyebrow">Nossa história</span>
+        <h2>Sobre Nós</h2>
+        <p>A Essential Odontologia nasceu do sonho de oferecer um atendimento odontológico humanizado, moderno e acessível. A clínica começou com um grande propósito: cuidar do sorriso das pessoas com dedicação e excelência.</p>
+        <p>Com o passar do tempo, estamos investimos em tecnologia, ampliamos nossa estrutura e formamos uma equipe qualificada, sempre mantendo o compromisso com a qualidade e o bem-estar de cada paciente.</p>
+      </div>
+
+      <figure class="about-photo" data-reveal style="--reveal-delay:.15s">
+        <img src="./img/juntos.jpeg" alt="Equipe da Essential Odontologia reunida">
+        <figcaption>Equipe unida e comprometida com a saúde bucal.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Essential Odontologia. Todos os direitos reservados.</p>
+    <p class="credit">Site desenvolvido por Álvaro Esteves (34) 9 9227-6929.</p>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a class="wa-float" href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2zm0 18.06h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.14.82.84-3.06-.19-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.83c0 4.55-3.7 8.24-8.26 8.24zm4.52-6.17c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"></path>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
