@@ -63,12 +63,11 @@ h3 {
   color: var(--ink);
   margin: 0 0 .5em;
   letter-spacing: -0.01em;
-  
+
 }
 
 p {
   margin: 0 0 1em;
-  
 }
 
 ul {
@@ -362,12 +361,18 @@ section {
   align-items: center;
   justify-content: center;
   color: black;
-  
+
 }
 
 @keyframes shineSweep {
-  0% { transform: translateX(-120%) rotate(8deg); }
-  55%, 100% { transform: translateX(120%) rotate(8deg); }
+  0% {
+    transform: translateX(-120%) rotate(8deg);
+  }
+
+  55%,
+  100% {
+    transform: translateX(120%) rotate(8deg);
+  }
 }
 
 .orbit-ring {
