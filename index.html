@@ -7,6 +7,25 @@
   <title>Essential Odontologia</title>
   <meta name="description"
     content="Essential Odontologia — atendimento odontológico humanizado, moderno e acessível. Clareamento, endodontia, facetas, prótese e mais.">
+  <meta name="theme-color" content="#dec0a9">
+
+  <!-- TODO: trocar pelo domínio definitivo quando o site estiver publicado -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Essential Odontologia">
+  <meta property="og:title" content="Essential Odontologia — Alfenas, MG">
+  <meta property="og:description"
+    content="Atendimento odontológico humanizado, moderno e acessível. Clareamento, endodontia, facetas, prótese e mais.">
+  <meta property="og:image" content="img/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Essential Odontologia — Alfenas, MG">
+  <meta name="twitter:description"
+    content="Atendimento odontológico humanizado, moderno e acessível. Clareamento, endodontia, facetas, prótese e mais.">
+  <meta name="twitter:image" content="img/og-cover.png">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +34,33 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Essential Odontologia",
+    "image": "img/og-cover.png",
+    "telephone": "+553598332103",
+    "sameAs": [
+      "https://www.instagram.com/essentialodontologiaalfenas"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Antônio da Silva Lemos, 51 - Jardim Tropical",
+      "addressLocality": "Alfenas",
+      "addressRegion": "MG",
+      "postalCode": "37133-582",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -21.430287,
+      "longitude": -45.9594856
+    },
+    "hasMap": "https://maps.app.goo.gl/NNWmJzbNREraG9cNA"
+  }
+  </script>
 </head>
 
 <body>
@@ -33,7 +79,8 @@
         <a href="https://maps.app.goo.gl/NNWmJzbNREraG9cNA" target="_blank" rel="noopener noreferrer">Endereço</a>
         <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw==" target="_blank"
           rel="noopener noreferrer">Instagram</a>
-
+        <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+          rel="noopener noreferrer" class="nav-cta">Agendar</a>
       </div>
 
       <button id="menu-btn" class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -71,14 +118,28 @@
 
 
       <div class="hero-visual" id="heroVisual" style="--reveal-delay:.15s">
+        <div class="orbit-ring" aria-hidden="true"></div>
+
+        <span class="bubble b1"></span>
+        <span class="bubble b2"></span>
+        <span class="bubble b3"></span>
+        <span class="bubble b4"></span>
+        <span class="bubble b5"></span>
 
         <div class="pearl-scene" aria-hidden="true">
-          <img src="img/dente-lowpoly.png" alt="Dente" class="pearl" id="pearl" />
+          <div class="pearl" id="pearl">
+            <picture>
+              <source srcset="img/dente-render.webp" type="image/webp">
+              <img src="img/dente-render.png" alt="Dente">
+            </picture>
+          </div>
           <span class="pearl-shine"></span>
         </div>
+        <span class="pearl-shadow" id="pearlShadow" aria-hidden="true"></span>
       </div>
     </div>
-    </div>
+
+    <span class="scroll-cue" aria-hidden="true"><span></span></span>
   </section>
 
   <!-- Serviços -->
@@ -215,7 +276,12 @@
       <div class="team-grid">
         <div class="team-card" data-reveal>
           <div class="team-photo-ring">
-            <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49.jpeg" alt="Dra. Myllena Esteves, Cirurgiã Dentista">
+            <picture>
+              <source srcset="./img/equipe-myllena.webp" type="image/webp">
+              <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49.jpeg"
+                alt="Dra. Myllena Esteves, Cirurgiã Dentista" width="800" height="1201" loading="lazy"
+                decoding="async">
+            </picture>
           </div>
           <h3>Dra. Myllena Esteves</h3>
           <p class="role">Cirurgiã Dentista</p>
@@ -224,8 +290,12 @@
 
         <div class="team-card" data-reveal>
           <div class="team-photo-ring">
-            <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49 (1).jpeg"
-              alt="Dr. Michel Frenhan, Cirurgião Dentista">
+            <picture>
+              <source srcset="./img/equipe-michel.webp" type="image/webp">
+              <img src="./img/WhatsApp Image 2025-09-01 at 16.13.49 (1).jpeg"
+                alt="Dr. Michel Frenhan, Cirurgião Dentista" width="800" height="1201" loading="lazy"
+                decoding="async">
+            </picture>
           </div>
           <h3>Dr. Michel Frenhan</h3>
           <p class="role">Cirurgião Dentista</p>
@@ -256,6 +326,20 @@
           <p class="author">Carlos Mendes</p>
         </div>
       </div>
+
+      <a class="google-reviews-link" data-reveal
+        href="https://maps.app.goo.gl/NNWmJzbNREraG9cNA" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#4285F4"
+            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" />
+          <path fill="#34A853"
+            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z" />
+          <path fill="#FBBC05" d="M5.84 14.1A6.6 6.6 0 0 1 5.5 12c0-.73.13-1.44.34-2.1V7.07H2.18A11 11 0 0 0 1 12c0 1.78.43 3.46 1.18 4.93z" />
+          <path fill="#EA4335"
+            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07L5.5 9.9C6.37 7.3 8.8 5.38 12 5.38z" />
+        </svg>
+        Ver todas as avaliações no Google
+      </a>
     </div>
   </section>
 
@@ -275,16 +359,86 @@
       </div>
 
       <figure class="about-photo" data-reveal style="--reveal-delay:.15s">
-        <img src="./img/juntos.jpeg" alt="Equipe da Essential Odontologia reunida">
+        <picture>
+          <source srcset="./img/juntos.webp" type="image/webp">
+          <img src="./img/juntos.jpeg" alt="Equipe da Essential Odontologia reunida" width="1000" height="1501"
+            loading="lazy" decoding="async">
+        </picture>
         <figcaption>Equipe unida e comprometida com a saúde bucal.</figcaption>
       </figure>
+    </div>
+
+    <div class="container">
+      <div class="map-card" data-reveal>
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?q=-21.430287,-45.9594856&z=16&output=embed"
+            title="Localização da Essential Odontologia no mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="map-info">
+          <span class="eyebrow">Onde estamos</span>
+          <h3>Essential Odontologia</h3>
+          <p>Rua Antônio da Silva Lemos, 51 — Jardim Tropical, Alfenas - MG</p>
+          <a class="btn btn-outline" href="https://maps.app.goo.gl/NNWmJzbNREraG9cNA" target="_blank"
+            rel="noopener noreferrer">Como chegar</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Essential Odontologia. Todos os direitos reservados.</p>
-    <p class="credit">Site desenvolvido por Álvaro Esteves (34) 9 9227-6929.</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="./img/01a12974-e670-4c4c-8464-5825cde412b1.jfif" alt="Essential Odontologia" class="footer-logo">
+        <p>Atendimento odontológico humanizado, moderno e acessível em Alfenas, MG.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw==" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram da Essential Odontologia">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56-.79.31-1.46.72-2.13 1.38A5.9 5.9 0 0 0 .63 4.14c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0z">
+              </path>
+              <path
+                d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zM18.41 4.15a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+            rel="noopener noreferrer" aria-label="WhatsApp da Essential Odontologia">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2zm0 18.06h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.14.82.84-3.06-.19-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.83c0 4.55-3.7 8.24-8.26 8.24zm4.52-6.17c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="#servicos">Serviços</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Sobre</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/+553598332103?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+          rel="noopener noreferrer">(35) 9833-2103</a>
+        <a href="https://maps.app.goo.gl/NNWmJzbNREraG9cNA" target="_blank" rel="noopener noreferrer">R. Antônio da
+          Silva Lemos, 51 — Alfenas, MG</a>
+        <a href="https://www.instagram.com/essentialodontologiaalfenas?igsh=MXkwZjMwY3BpZmVxaw==" target="_blank"
+          rel="noopener noreferrer">@essentialodontologiaalfenas</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Essential Odontologia. Todos os direitos reservados.</p>
+      <p class="credit">Site desenvolvido por Álvaro Esteves (34) 9 9227-6929.</p>
+    </div>
   </footer>
 
   <!-- Botão flutuante WhatsApp -->

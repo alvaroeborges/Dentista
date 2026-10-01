@@ -56,21 +56,34 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach((el) => el.classList.add("in-view"));
   }
 
-  /* ---------- 4. Rotação 3D da "pérola" no hero ---------- */
+  /* ---------- 4. Balanço 3D do dente no hero ---------- */
   const pearl = document.getElementById("pearl");
+  const pearlShadow = document.getElementById("pearlShadow");
   const heroVisual = document.getElementById("heroVisual");
-  let autoAngle = 0;
+  let time = 0;
   let tiltX = 0;
   let tiltY = 0;
 
   function renderPearl() {
+    // Balanço senoidal (não um giro de 360°): mantém o dente sempre de frente,
+    // evitando o "flip" visual de uma imagem plana vista de perfil.
+    const sway = Math.sin(time) * 14;
+    const bob = Math.sin(time * 1.3) * 10;
+
     if (pearl) {
-      pearl.style.transform = `rotateX(${tiltX}deg) rotateY(${
-        autoAngle + tiltY
+      pearl.style.transform = `translateY(${bob}px) rotateX(${tiltX}deg) rotateY(${
+        sway + tiltY
       }deg)`;
     }
+    if (pearlShadow) {
+      // bob > 0 move o dente para baixo (mais perto do "chão"), então a sombra
+      // deve crescer e escurecer; bob < 0 (subindo) encolhe e some um pouco.
+      const scale = 1 + bob / 70;
+      pearlShadow.style.transform = `scale(${scale})`;
+      pearlShadow.style.opacity = String(0.65 + bob / 45);
+    }
     if (!prefersReducedMotion) {
-      autoAngle += 0.15;
+      time += 0.012;
       requestAnimationFrame(renderPearl);
     }
   }
@@ -81,8 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const rect = heroVisual.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
-      tiltY = x * 26;
-      tiltX = y * -18;
+      tiltY = x * 18;
+      tiltX = y * -12;
     });
     heroVisual.addEventListener("mouseleave", () => {
       tiltX = 0;
