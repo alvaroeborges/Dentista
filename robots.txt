@@ -1,0 +1,5 @@
+# TODO: trocar SEU-DOMINIO pelo domínio real
+User-agent: *
+Allow: /
+
+Sitemap: https://www.SEU-DOMINIO.com.br/sitemap.xml
